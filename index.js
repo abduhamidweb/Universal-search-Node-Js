@@ -12,7 +12,7 @@ const server = http.createServer((req, res) => {
         let sorov = qs.parse(query.query);
         let id = req.url.split("/")[2];
         let list = [];
-        if (req.method == "GET") {            
+        if (req.method == "GET") {
             if (id) {
                 res.end(JSON.stringify(posts.filter((e) => e.id == id)[0]));
             } else {
